@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+  margin: 0;
+}
+
+.login-box, .pagina-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button, .botao-sair {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background: hsl(305, 39%, 49%);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, .botao-sair:hover {
+  background: #6045a0;
+}
+
+.erro {
+  color: #ff0095;
+  margin-top: 10px;
+}
