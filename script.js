@@ -1,17 +1,22 @@
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-const usuarios = {
-      "Leticia": "000",
-      "Nicole": "111",
-      "Rayane": "222",
+    const usuario = document.getElementById('usuario').value;
+    const senha = document.getElementById('senha').value;
+    const mensagemErro = document.getElementById('mensagem-erro');
+
+    mensagemErro.classList.add('hidden');
+
+    const credenciais = {
+        "Leticia": "000",
+        "Rayane": "111",
+        "Nicole": "222"
     };
-function login() {
-  const usuario = document.getElementById("usuario").value;
-  const senha = document.getElementById("senha").value;
 
-
-  if (usuarios[usuario] && usuario[usuario] === senha) {
-    window.location.href = "index2.html"; 
-  } else {
-    document.getElementById("erro").innerText = "Usuário ou senha incorretos!";
-  }
-}
+    if (credenciais[usuario] === senha) {
+        window.location.href = 'produtos.html';
+    } else {
+        mensagemErro.textContent = 'Usuário ou senha incorretos.';
+        mensagemErro.classList.remove('hidden');
+    }
+});
